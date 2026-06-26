@@ -129,8 +129,6 @@ def main():
     }
 
     candidate = {
-        "stage360": stage360,
-        "stage359": stage359,
         "revocation_evidence": revocation_evidence,
     }
 

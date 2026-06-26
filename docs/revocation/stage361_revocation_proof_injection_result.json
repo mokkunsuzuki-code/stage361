@@ -1,7 +1,7 @@
 {
   "stage": 361,
   "engine": "Revocation Proof Injection Gate with Stage360 External Timestamp Binding",
-  "created_at": "2026-06-26T04:56:56.562660+00:00",
+  "created_at": "2026-06-26T04:59:43.974928+00:00",
   "source_stage": 360,
   "previous_hash": "a99b52181342a3140425ff75496f752a6378e04ebc351f8a7c25cb5598a58acc",
   "revocation_target": {
@@ -9,16 +9,14 @@
     "public_key_fingerprint": "sha256:9b9f3f4d5e5b8e04a60f2f0c1f3b2a6df01af45b217bbd85e82f2ac52b3d5c10",
     "note": "Stage359 fingerprint is used as revocation target when available."
   },
-  "revocation_status": "blocked",
-  "decision": "block",
-  "block_reasons": [
-    "private_material_detected"
-  ],
+  "revocation_status": "pending",
+  "decision": "pending_revocation_proof",
+  "block_reasons": [],
   "checks": {
     "stage360_result_present": true,
     "stage360_previous_hash_bound": true,
     "stage359_revocation_target_present": true,
-    "private_material_detected": true,
+    "private_material_detected": false,
     "fake_verified_claim_detected": false,
     "revoked_detected": false,
     "unknown_treated_as_good_detected": false,
@@ -71,5 +69,5 @@
       "It does not handle private keys or raw secrets."
     ]
   },
-  "result_sha256": "87b27ea7c31301a10ea849c8df45446501aa3c585ee1cde1565c3a1ad27b8497"
+  "result_sha256": "f4c7f134e04ad7a61f1bc3ab8f770dd118689d018dcbc58fb076dc8771d24bf4"
 }
