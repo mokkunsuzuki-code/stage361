@@ -1,0 +1,12 @@
+Stage361: Revocation Proof Injection Gate
+with Stage360 External Timestamp Binding
+
+Decision: block
+Revocation Status: blocked
+Previous Hash: None
+Result SHA256: 4b6f923bedbf7deb1983ea9143df1ce9e4e8c0f8f494fa7f7729589030e0470b
+
+Meaning:
+Stage361 adds a safe revocation proof receiver into the QSP evidence rail.
+It does not falsely claim real OCSP or CRL verification.
+Without real proof, the correct decision is pending_revocation_proof.

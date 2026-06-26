@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Stage361: Revocation Proof Injection Gate</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif; max-width: 920px; margin: 40px auto; padding: 0 20px; line-height: 1.7; }
+    code { background: #f4f4f4; padding: 2px 6px; border-radius: 6px; }
+    .box { border: 1px solid #ddd; border-radius: 14px; padding: 20px; margin: 20px 0; }
+  </style>
+</head>
+<body>
+  <h1>Stage361: Revocation Proof Injection Gate</h1>
+
+  <p>
+    Stage361 adds a revocation proof injection gate on top of Stage360 External Timestamp Binding.
+  </p>
+
+  <div class="box">
+    <h2>Core Meaning</h2>
+    <p>
+      Stage360 asks: when did this evidence exist?
+    </p>
+    <p>
+      Stage361 asks: is the related key or certificate revoked?
+    </p>
+  </div>
+
+  <div class="box">
+    <h2>Decision</h2>
+    <p><code>pending_revocation_proof</code></p>
+    <p>
+      This is the correct default state because Stage361 does not yet claim real OCSP or CRL cryptographic verification.
+    </p>
+  </div>
+
+  <div class="box">
+    <h2>Safety Boundary</h2>
+    <ul>
+      <li>No private keys</li>
+      <li>No raw secrets</li>
+      <li>No raw QKD key material</li>
+      <li>No false OCSP verified claim</li>
+      <li>No false CRL verified claim</li>
+    </ul>
+  </div>
+
+  <div class="box">
+    <h2>Public Evidence</h2>
+    <ul>
+      <li><a href="./revocation/stage361_revocation_proof_injection_result.json">Stage361 Result JSON</a></li>
+      <li><a href="./revocation/stage361_revocation_proof_injection_summary.txt">Stage361 Summary</a></li>
+    </ul>
+  </div>
+</body>
+</html>

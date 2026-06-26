@@ -1,0 +1,19 @@
+# private / core / secrets
+core/
+private_core/
+private/
+secrets/
+keys/
+*.pem
+*.key
+*.p12
+*.pfx
+*.asc
+*.gpg
+*.env
+.env
+.DS_Store
+
+# allow public docs outputs
+!docs/
+!docs/**
