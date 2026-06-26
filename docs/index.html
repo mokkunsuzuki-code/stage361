@@ -1304,21 +1304,25 @@ fetch("./docs/stage335/watch-summary.json")
 <section>
   <h2>Stage361: Revocation Proof Injection Gate</h2>
   <p>
-    Stage361 adds a revocation proof injection gate on top of Stage360 External Timestamp Binding.
+    Stage361 extends Stage360 by adding a revocation proof injection gate to the REMEDA/QSP evidence rail.
+  </p>
+  <p>
+    Stage360 binds the Stage359 public key fingerprint result into external timestamp proof metadata.
+    Stage361 adds the next missing verification layer: whether the related key or certificate is revoked.
   </p>
   <ul>
-    <li>Stage360 asks: when did this evidence exist?</li>
-    <li>Stage361 asks: is the related key or certificate revoked?</li>
-    <li>Default decision: <code>pending_revocation_proof</code></li>
-    <li>No false OCSP verified claim</li>
-    <li>No false CRL verified claim</li>
-    <li>No private keys, no raw secrets, no raw QKD key material</li>
+    <li>Stage360 external timestamp proof result is bound as previous_hash.</li>
+    <li>Stage359 public key fingerprint is used as the revocation target.</li>
+    <li>OCSP proof metadata receiver is created.</li>
+    <li>CRL proof metadata receiver is created.</li>
+    <li>Signed revocation metadata receiver is created.</li>
+    <li>Missing real revocation proof returns pending_revocation_proof.</li>
+    <li>Revoked status, fake OCSP verified claims, fake CRL verified claims, and private material leakage are blocked.</li>
+    <li>Stage361 does not claim real OCSP or CRL cryptographic verification.</li>
   </ul>
   <p>
-    Public evidence:
-    <a href="./revocation/stage361_revocation_proof_injection_result.json">Stage361 Result JSON</a>
-    /
-    <a href="./revocation/stage361_revocation_proof_injection_summary.txt">Stage361 Summary</a>
+    <a href="./revocation/stage361_revocation_proof_injection_result.json">Stage361 Revocation Proof Injection Result JSON</a><br>
+    <a href="./revocation/stage361_revocation_proof_injection_summary.txt">Stage361 Summary TXT</a>
   </p>
 </section>
 
