@@ -9,7 +9,7 @@ ROOT = Path(".")
 DOCS = ROOT / "docs"
 REVOCATION_DIR = DOCS / "revocation"
 
-STAGE360_RESULT = DOCS / "timestamp" / "stage360_external_timestamp_binding_result.json"
+STAGE360_RESULT = DOCS / "timestamp-proof" / "stage360_external_timestamp_proof_result.json"
 STAGE359_KEY_RESULT = DOCS / "keys" / "stage359_public_key_fingerprint_result.json"
 
 OUT_JSON = REVOCATION_DIR / "stage361_revocation_proof_injection_result.json"
